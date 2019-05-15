@@ -56,6 +56,7 @@
            :daa   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
            :dagw   {:pos :Verb, :lemma "dagw", :gloss "spin", :rootClass :CCC},
            :di   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
+           :d_i   {:pos :Verb, :lemma "d'i", :gloss "do", },
            :din   {:pos :Verb, :lemma "din", :gloss "weigh (wägen)", :conjClass :Prefix},
            :dmm   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
            :du   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
@@ -71,7 +72,7 @@
            :genaf   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
            :gwa   {:pos :Verb, :lemma "gwa", :gloss "sleep", :conjClass :Suffix},
            :génaf   {:pos :Verb, :lemma "génaf", :gloss "kneel", :rootClass :CCC},
-           :ha   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
+           :ha_   {:pos :Verb, :lemma "[y]", :gloss "bring", },
            :hai   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
            :haid   {:pos :Verb, :lemma "haid", :gloss "sew", :rootClass :CCC},
            :hajid   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
@@ -99,7 +100,7 @@
            :mwas   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
            :mwaš   {:pos :Verb, :lemma "mwaš", :gloss "whisper", :rootClass :CCC},
            :másu   {:pos :Verb, :lemma "másu", :gloss "hear", :rootClass :CCC},
-           :nani   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
+           :nai   {:pos :Verb, :lemma "nai", :gloss "milk", },
            :naw   {:pos :Verb, :lemma "naw", :gloss "miss", :rootClass :CC},
            :ram   {:pos :Verb, :lemma "ram", :gloss "follow", :rootClass :CC},
            :rby   {:pos :Verb, :lemma "[y]", :gloss "[x]", },
@@ -2228,6 +2229,21 @@
                          [:Singular "áskatim"],
                          [:Plural "néskatim"]]
                  }
+                {:label "beja_A-VPref2CCC-iCausAffPres-ketim"
+                 :note "AL#263"
+                 :common {:vmorphClass :Finite_Partial
+                          :stemClass :PnasSVi,
+                          :rootClass :CCC,
+                          :polarity :Affirmative,
+                          :conjClass :Prefix,
+                          :lexeme :ketim,
+                          :pos :Verb,
+                          :derivedStem :S,
+                          :tam :Present}
+                 :terms [[:number :token],
+                         [:Singular "áskatim"],
+                         [:Plural "néskatim"]]
+                 }
                 {:label "beja_A-VPref2CCC-iCausAffPres-fedig"
                  :note "AL#263"
                  :common {:vmorphClass :Finite_Partial
@@ -2258,7 +2274,7 @@
                          [:Singular "áshajīd"],
                          [:Plural "néshajīd"]]
                  }
-                {:label "beja_A-VPref2CCC-iCausAffPres-ketim"
+                {:label "beja_A-VPref2CCC-iCausAffFut-ketim"
                  :note "AL#263"
                  :common {:vmorphClass :Finite_Partial
                           :stemClass :PnasSVi,
@@ -2268,7 +2284,7 @@
                           :lexeme :ketim,
                           :pos :Verb,
                           :derivedStem :S,
-                          :tam :Present,
+                          :tam :Future,
                           }
                  :terms [[:number :person :gender :token],
                          [:Singular :Person1 :Common "sekátmat"],
@@ -7700,6 +7716,27 @@
                           :rootClass :CVC
                           :tam :Present}
                  :terms [[:number :person :gender :token],
+                         [:Singular :Person1 :Common "eef̄ri"],
+                         [:Singular :Person2 :Masc "teefria"],
+                         [:Singular :Person2 :Fem "teefri"],
+                         [:Singular :Person3 :Masc "eefri"],
+                         [:Singular :Person3 :Fem "teefri"],
+                         [:Plural :Person1 :Common "neefri"],
+                         [:Plural :Person2 :Common "teefrin(a)"],
+                         [:Plural :Person3 :Common "eefrin(a)"]]
+                 }
+                {:label "beja_A-VPref4CCYBaseAffPast-for"
+                 :note "AL#287"
+                 :common {:vmorphClass :Finite
+                          :conjClass :Prefix,
+                          :stemClass :Pi1syl,
+                          :derivedStem :Base,
+                          :lexeme :for,
+                          :polarity :Affirmative,
+                          :pos :Verb,
+                          :rootClass :CVC
+                          :tam :Past}
+                 :terms [[:number :person :gender :token],
                          [:Singular :Person1 :Common "afōr"],
                          [:Singular :Person2 :Masc "tefōra"],
                          [:Singular :Person2 :Fem "tefōri"],
@@ -8734,29 +8771,30 @@
                          [:Singular :Person1 :Common "kāmé̄bdān"]]
                  }
                 {:label "beja_A-VPrefIrregCC-OTHER"
-                 :note "AL#304-26 ::  (pp. 221-240). THERE ARE MISSING IRREGULAR VERBS:di say,di do,hi give,ah take,bari have,meri find,heru go,seek,wish,kan know,awai help,hamai be big,jai die,nani milk,bai go,fai sit,be,hai sit,be,kai become,be"
+                 :note "AL#304-26 ::  (pp. 221-240). THERE ARE MISSING IRREGULAR VERBS:di say,d_i do,hi give,ah take,bari have,meri find,heru go,seek,wish,kan know,awai help,hamai be big,jai die,nai milk,bai go,fai sit,be,hai sit,be,kai become,be"
                  :common {:vmorphClass :IrrVerbs
                           :conjClass :Prefix,
                           :stemClass :Irr_other,
                           :tknType :IrrVerbs,
                           :pos :Verb,
                           :rootClass :Irr}
-                 :terms [[:lexeme :token-note],
-                         [:ah "take"],
-                         [:awai "help"],
-                         [:bai "go"],
-                         [:bari "have"],
-                         [:di "say"],
-                         [:fai "sit"],
-                         [:hai "sit"],
-                         [:hamai "be big"],
-                         [:heru "go"],
-                         [:hi "give"],
-                         [:jai "dia"],
-                         [:kai "become"],
-                         [:kan "know"],
-                         [:meri "find"],
-                         [:nani "milk"]]
+                 :terms [[:lexeme :token-gloss :token-note],
+                         [:ah "take" "AL#311-313"],
+                         [:awai "help" "AL#322"],
+                         [:bai "go" "AL#325.2"],
+                         [:bari "have" "AL#314-316"],
+                         [:di "say" "AL#304-305"],
+                         [:d_i "do" "AL#306-307"],
+                         [:fai "sit" "AL#325.3-326"],
+                         [:hai "sit" "AL325.3-326#"],
+                         [:hamai "be big" "AL#322-323"],
+                         [:heru "go" "AL#319-320"],
+                         [:hi "give" "AL#308-310"],
+                         [:jai "die" "AL#324"],
+                         [:kai "become" "AL#325.3-326"],
+                         [:kan "know" "AL#321"],
+                         [:meri "find" "AL#317-318"],
+                         [:nai "milk" "AL#325.1"]]
                  }
                 {:label "beja_A-VPrefIrregCCBaseAffAor-ha"
                  :note "AL#301"
@@ -8764,8 +8802,8 @@
                           :stemClass :Irr_ha,
                           :rootClass :Irr,
                           :polarity :Affirmative,
-                          :conjClass :Prefix,
-                          :lexeme :ha,
+                          :conjClass :Suffix,
+                          :lexeme :ha_,
                           :pos :Verb,
                           :derivedStem :Base,
                           :tam :Future,
@@ -8778,7 +8816,7 @@
                 {:label "beja_A-VPrefIrregCCBaseAffAor-ii"
                  :note "AL#302"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ii,
                           :derivedStem :Base,
                           :lexeme :ii,
@@ -8799,7 +8837,7 @@
                 {:label "beja_A-VPrefIrregCCBaseAffCond-ii"
                  :note "AL#302"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ii,
                           :derivedStem :Base,
                           :lexeme :ii,
@@ -8823,8 +8861,8 @@
                           :stemClass :Irr_ha,
                           :rootClass :Irr,
                           :polarity :Affirmative,
-                          :conjClass :Prefix,
-                          :lexeme :ha,
+                          :conjClass :Suffix,
+                          :lexeme :ha_,
                           :pos :Verb,
                           :derivedStem :Base,
                           :tam :FutureComp1}
@@ -8838,7 +8876,7 @@
                           :stemClass :Irr_ii,
                           :rootClass :Irr,
                           :polarity :Affirmative,
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :lexeme :ii,
                           :pos :Verb,
                           :derivedStem :Base,
@@ -8854,8 +8892,8 @@
                           :stemClass :Irr_ha,
                           :rootClass :Irr,
                           :polarity :Affirmative,
-                          :conjClass :Prefix,
-                          :lexeme :ha,
+                          :conjClass :Suffix,
+                          :lexeme :ha_,
                           :pos :Verb,
                           :derivedStem :Base,
                           :tam :FutureComp2}
@@ -8868,7 +8906,7 @@
                           :stemClass :Irr_ii,
                           :rootClass :Irr,
                           :polarity :Affirmative,
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :lexeme :ii,
                           :pos :Verb,
                           :derivedStem :Base,
@@ -8884,8 +8922,8 @@
                           :stemClass :Irr_ha,
                           :rootClass :Irr,
                           :polarity :Affirmative,
-                          :conjClass :Prefix,
-                          :lexeme :ha,
+                          :conjClass :Suffix,
+                          :lexeme :ha_,
                           :pos :Verb,
                           :derivedStem :Base,
                           :tam :Imperative,
@@ -8900,7 +8938,7 @@
                           :stemClass :Irr_ii,
                           :rootClass :Irr,
                           :polarity :Affirmative,
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :lexeme :ii,
                           :pos :Verb,
                           :derivedStem :Base,
@@ -8913,10 +8951,10 @@
                 {:label "beja_A-VPrefIrregCCBaseAffPerf-ha"
                  :note "AL#301"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ha,
                           :derivedStem :Base,
-                          :lexeme :ha,
+                          :lexeme :ha_,
                           :polarity :Affirmative,
                           :pos :Verb,
                           :rootClass :Irr,
@@ -8932,7 +8970,7 @@
                 {:label "beja_A-VPrefIrregCCBaseAffPerf-ii"
                  :note "AL#302"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ii,
                           :derivedStem :Base,
                           :lexeme :ii,
@@ -8953,10 +8991,10 @@
                 {:label "beja_A-VPrefIrregCCBaseAffPres-ha"
                  :note "AL#301"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ha,
                           :derivedStem :Base,
-                          :lexeme :ha,
+                          :lexeme :ha_,
                           :polarity :Affirmative,
                           :pos :Verb,
                           :rootClass :Irr,
@@ -8972,7 +9010,7 @@
                 {:label "beja_A-VPrefIrregCCBaseAffPres-ii"
                  :note "AL#302"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ii,
                           :derivedStem :Base,
                           :lexeme :ii,
@@ -8996,8 +9034,8 @@
                           :stemClass :Irr_ha,
                           :rootClass :Irr,
                           :polarity :Negative,
-                          :conjClass :Prefix,
-                          :lexeme :ha,
+                          :conjClass :Suffix,
+                          :lexeme :ha_,
                           :pos :Verb,
                           :derivedStem :Base,
                           :tam :Conditional,
@@ -9008,7 +9046,7 @@
                 {:label "beja_A-VPrefIrregCCBaseNegCond-ii"
                  :note "AL#302"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ii,
                           :derivedStem :Base,
                           :lexeme :ii,
@@ -9029,7 +9067,7 @@
                 {:label "beja_A-VPrefIrregCCBaseNegFut1-ii"
                  :note "AL#302"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ii,
                           :derivedStem :Base,
                           :lexeme :ii,
@@ -9053,7 +9091,7 @@
                           :stemClass :Irr_ii,
                           :rootClass :Irr,
                           :polarity :Negative,
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :lexeme :ii,
                           :pos :Verb,
                           :derivedStem :Base,
@@ -9066,7 +9104,7 @@
                 {:label "beja_A-VPrefIrregCCBaseNegImp-ii"
                  :note "AL#302"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ii,
                           :derivedStem :Base,
                           :lexeme :ii,
@@ -9085,7 +9123,7 @@
                 {:label "beja_A-VPrefIrregCCBaseNegOpt-ii"
                  :note "AL#302"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ii,
                           :derivedStem :Base,
                           :lexeme :ii,
@@ -9109,8 +9147,8 @@
                           :stemClass :Irr_ha,
                           :rootClass :Irr,
                           :polarity :Negative,
-                          :conjClass :Prefix,
-                          :lexeme :ha,
+                          :conjClass :Suffix,
+                          :lexeme :ha_,
                           :pos :Verb,
                           :derivedStem :Base,
                           :tam :Past,
@@ -9124,7 +9162,7 @@
                           :stemClass :Irr_ii,
                           :rootClass :Irr,
                           :polarity :Negative,
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :lexeme :ii,
                           :pos :Verb,
                           :derivedStem :Base,
@@ -9139,8 +9177,8 @@
                           :stemClass :Irr_ha,
                           :rootClass :Irr,
                           :polarity :Negative,
-                          :conjClass :Prefix,
-                          :lexeme :ha,
+                          :conjClass :Suffix,
+                          :lexeme :ha_,
                           :pos :Verb,
                           :derivedStem :Base,
                           :tam :Present,
@@ -9151,7 +9189,7 @@
                 {:label "beja_A-VPrefIrregCCBaseNegPres-ii"
                  :note "AL#302"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ii,
                           :derivedStem :Base,
                           :lexeme :ii,
@@ -9175,8 +9213,8 @@
                           :stemClass :Irr_ha,
                           :rootClass :Irr,
                           :polarity :Affirmative,
-                          :conjClass :Prefix,
-                          :lexeme :ha,
+                          :conjClass :Suffix,
+                          :lexeme :ha_,
                           :pos :Verb,
                           :derivedStem :S,
                           :tam :Future,
@@ -9191,8 +9229,8 @@
                           :stemClass :Irr_ha,
                           :rootClass :Irr,
                           :polarity :Affirmative,
-                          :conjClass :Prefix,
-                          :lexeme :ha,
+                          :conjClass :Suffix,
+                          :lexeme :ha_,
                           :pos :Verb,
                           :derivedStem :S,
                           :tam :FutureComp2,
@@ -9203,10 +9241,10 @@
                 {:label "beja_A-VPrefIrregCCCausAffPerf-ha"
                  :note "AL#301"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ha,
                           :derivedStem :S,
-                          :lexeme :ha,
+                          :lexeme :ha_,
                           :polarity :Affirmative,
                           :pos :Verb,
                           :rootClass :Irr,
@@ -9224,8 +9262,8 @@
                           :stemClass :Irr_ha,
                           :rootClass :Irr,
                           :polarity :Affirmative,
-                          :conjClass :Prefix,
-                          :lexeme :ha,
+                          :conjClass :Suffix,
+                          :lexeme :ha_,
                           :pos :Verb,
                           :derivedStem :S,
                           :tam :Present}
@@ -9242,7 +9280,7 @@
                           :stemClass :Irr_ii,
                           :rootClass :Irr,
                           :polarity :Negative,
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :lexeme :ii,
                           :pos :Verb,
                           :derivedStem :S,
@@ -9256,7 +9294,7 @@
                 {:label "beja_A-VPrefIrregCCCausNegPerf-ii"
                  :note "AL#302"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ii,
                           :derivedStem :S,
                           :lexeme :ii,
@@ -9277,7 +9315,7 @@
                 {:label "beja_A-VPrefIrregCCCausNegPres-ii"
                  :note "AL#302"
                  :common {:vmorphClass :Finite
-                          :conjClass :Prefix,
+                          :conjClass :Suffix,
                           :stemClass :Irr_ii,
                           :derivedStem :S,
                           :lexeme :ii,
